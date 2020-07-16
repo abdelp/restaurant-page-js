@@ -4,6 +4,9 @@
 
 ![screenshot](./app_screenshot.png)
 
+## Live Demo
+
+[Link](https://brave-brahmagupta-53b44a.netlify.app)
 
 ## Built With
 
