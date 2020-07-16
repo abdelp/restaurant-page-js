@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-[Link](https://brave-brahmagupta-53b44a.netlify.app)
+[Link](https://abdelp.github.io/restaurant-page-js/)
 
 ## Built With
 
