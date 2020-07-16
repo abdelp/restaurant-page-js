@@ -32,7 +32,7 @@ Clone the repo:
 git clone https://github.com/abdelp/restaurant-page-js.git
 ```
 
-Install node packages in your local repo:
+Inside the root folder of the project, install the node packages:
 
 ```
 npm install
