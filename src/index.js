@@ -1,6 +1,10 @@
+import * as Display from './modules/display';
+import * as Config from './modules/configurations';
 import * as Home from './modules/home';
-import * as Contact from './modules/contact';
-import * as Menu from './modules/menu';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+const contentId = Config.getContentId();
+Display.cleanContent(contentId);
+Display.setBackgroundImage(contentId, Config.getBackgroundImg());
+Display.insertNav(Config.getLinks());
 Home.loadHome();

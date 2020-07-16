@@ -5,12 +5,20 @@ const setBackgroundImage = (elementId, imgSrc) => {
 };
 
 const insertTitle = (title) => {
+  let header = document.getElementById('header');
+
+  if (!header) {
+    header = document.createElement('header');
+    header.id = 'header';
+    document.body.prepend(header);
+  }
+
+  header.innerHTML = '';
   let element = document.createElement('h1');
   element.innerText = title;
   element.classList.add('text-center');
-  let content = document.getElementById('content');
 
-  content.appendChild(element);
+  header.appendChild(element);
 };
 
 const insertNav = (list) => {
@@ -20,18 +28,20 @@ const insertNav = (list) => {
   list.forEach(opt => {
     let li = document.createElement('li');
     li.classList.add('nav-item');
-    let a = document.createElement('a');
-    a.classList.add('nav-link');
-    a.innerText = opt.title;
-    a.href = opt.link;
-    li.appendChild(a);
+    let button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'nav-link btn btn-primary';
+    button.innerText = opt.title;
+    button.onclick = () => opt.link();
+    li.appendChild(button);
     ul.appendChild(li);
   });
 
   content.appendChild(ul);
 };
 
-const insertWelcomeMessage = (message) => {
+const insertWelcomeMessage = (contentId, message) => {
+  let content = document.getElementById(contentId);
   let welcomeContent = document.createElement('div');
   welcomeContent.classList.add('row');
   let col = document.createElement('div');
@@ -46,8 +56,9 @@ const insertWelcomeMessage = (message) => {
   content.appendChild(welcomeContent);
 };
 
-const addGallery = (items) => {
-
+const cleanContent = (element) => {
+  let content = document.getElementById(element);
+  content.innerHTML = '';
 }
 
-export { setBackgroundImage, insertTitle, insertNav, insertWelcomeMessage };
+export { setBackgroundImage, insertTitle, insertNav, insertWelcomeMessage, cleanContent };
