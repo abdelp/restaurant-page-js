@@ -40,7 +40,7 @@ npm install
 
 ### Usage
 
-Go to the root folder and open and run the npm server script:
+Go to the root folder and run the npm server script:
 
 ```
 npm run server
