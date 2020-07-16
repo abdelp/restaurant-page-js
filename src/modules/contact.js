@@ -13,4 +13,4 @@ const loadContact = () => {
   Display.insertContent(subcontentId, welcomeMsg);
 };
 
-export { loadContact };
+export default loadContact;

@@ -1,4 +1,4 @@
-import * as Display from "./display";
+import * as Display from './display';
 import * as Config from './configurations';
 
 const loadHome = () => {
@@ -13,6 +13,6 @@ const loadHome = () => {
 
   Display.cleanContent(subcontentId);
   Display.insertContent(subcontentId, welcomeMsg);
-}
+};
 
-export { loadHome }
+export default loadHome;
