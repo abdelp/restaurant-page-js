@@ -1,9 +1,10 @@
-html, body {
+html,
+body {
   height: 100%;
-  /* overflow: hidden; */
 }
 
-#header, #content {
+#header,
+#content {
   position: relative;
   z-index: 2;
 }
